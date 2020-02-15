@@ -1,0 +1,22 @@
+!date
+!florida
+!followed
+!followers
+!following
+!give <username> <number>
+!headset
+!keyboard
+!mouse
+!nextsong
+!recentfollowers
+!song
+!specs
+!stats
+!texas
+!time
+!top5points
+!top5time
+!uptime
+!yeet
+!sr <youtube url>
+!songrequest <youtube url>
