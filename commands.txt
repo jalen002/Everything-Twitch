@@ -1,22 +1,22 @@
-!date
-!florida
-!followed
-!followers
-!following
-!give <username> <number>
-!headset
-!keyboard
-!mouse
-!nextsong
-!recentfollowers
-!song
-!specs
-!stats
-!texas
-!time
-!top5points
-!top5time
-!uptime
-!yeet
-!sr <youtube url>
-!songrequest <youtube url>
+!date									- Tells the user what today's date is
+!florida								- Gives a brief overview of Florida Gators football
+!followed								- Tells the user when they followed my channel
+!followers								- Gives the count of current channel followers
+!following								- Gives the user how long they've been following my channel
+!give <username> <number>				- Allows the user to give another user channel points
+!headset								- A description of my current gaming headset
+!keyboard								- A description of my current gaming keyboard
+!mouse									- A description of my current gaming mouse
+!nextsong								- Tells the user what the next song in the queue is
+!recentfollowers						- Tells the 3 most recent followers
+!song									- Tells user what song is currently playing
+!specs									- Tells the user what my PC specs are
+!stats									- Gives stats about stream: Game, title, Uptime, viewers
+!texas									- Gives a brief overview of Texas Longhorns football
+!time									- Gives the current time
+!top5points								- Top 5 users based on channel points
+!top5time								- Top 5 users based on hours watched
+!uptime									- How long the current stream has been live
+!yeet									- A sound
+!sr <youtube url>						- Allows users to play a song on stream
+!songrequest <youtube url>				- Allows users to play a song on stream
