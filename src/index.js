@@ -12,14 +12,14 @@ const routing = (
       <div>
         <ul>
             <li>
-              <Link to="/Everything-Twitch/#/">Home</Link>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/Everything-Twitch/#/commands">Commands</Link>
+              <Link to="/commands">Commands</Link>
             </li>
         </ul>
-        <Route path="/Everything-Twitch/#/" component={App} />
-        <Route path="/Everything-Twitch/#/commands" component={Commands} />
+        <Route path="/" component={App} />
+        <Route path="/commands" component={Commands} />
       </div>
     </Router>
   )
