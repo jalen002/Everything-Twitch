@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Everything-Twitch/static/css/main.d1b05096.chunk.css",
+    "main.js": "/Everything-Twitch/static/js/main.d037e301.chunk.js",
+    "main.js.map": "/Everything-Twitch/static/js/main.d037e301.chunk.js.map",
+    "runtime-main.js": "/Everything-Twitch/static/js/runtime-main.147f7f85.js",
+    "runtime-main.js.map": "/Everything-Twitch/static/js/runtime-main.147f7f85.js.map",
+    "static/js/2.8f745921.chunk.js": "/Everything-Twitch/static/js/2.8f745921.chunk.js",
+    "static/js/2.8f745921.chunk.js.map": "/Everything-Twitch/static/js/2.8f745921.chunk.js.map",
+    "index.html": "/Everything-Twitch/index.html",
+    "precache-manifest.b01534050840ab98845ac58e82a78dca.js": "/Everything-Twitch/precache-manifest.b01534050840ab98845ac58e82a78dca.js",
+    "service-worker.js": "/Everything-Twitch/service-worker.js",
+    "static/css/main.d1b05096.chunk.css.map": "/Everything-Twitch/static/css/main.d1b05096.chunk.css.map",
+    "static/js/2.8f745921.chunk.js.LICENSE.txt": "/Everything-Twitch/static/js/2.8f745921.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/Everything-Twitch/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.147f7f85.js",
+    "static/js/2.8f745921.chunk.js",
+    "static/css/main.d1b05096.chunk.css",
+    "static/js/main.d037e301.chunk.js"
+  ]
+}
