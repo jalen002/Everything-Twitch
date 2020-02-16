@@ -18,7 +18,7 @@ const routing = (
               <Link to="/commands">Commands</Link>
             </li>
         </ul>
-        <Route exact path="/" component={App} />
+        <Route path="/" component={App} />
         <Route path="/commands" component={Commands} />
       </div>
     </Router>
