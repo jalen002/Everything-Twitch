@@ -11,7 +11,7 @@ import Commands from './view/commands/Commands';
 
 const history = createBrowserHistory();
 const routing = (
-  <Router basename={process.env.PUBLIC_URL} history={history}>
+  <Router /*basename={process.env.PUBLIC_URL}*/ history={history}>
     <div>
       <ul>
         <li>
