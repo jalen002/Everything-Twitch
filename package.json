@@ -17,7 +17,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
-	"build": "react-scripts build ; Copy-Item -path build/index.html -destination build/404.html",
+    "build": "react-scripts build && @powershell copy  'build/index.html' 'build/404.html'",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
