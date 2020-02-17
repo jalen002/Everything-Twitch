@@ -1,4 +1,4 @@
-# Everything-Twtich
+# Everything-Twitch
 Helpful files for twitch along with a list of useful stream commands
 
 For notes on how to build and deploy to github.pages click [here](https://dev.to/yuribenjamin/how-to-deploy-react-app-in-github-pages-2a1f)
