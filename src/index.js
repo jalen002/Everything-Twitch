@@ -12,14 +12,14 @@ const routing = (
     <div>
       <ul>
         <li>
-          <Link to="/#/">Home</Link>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/#/commands">Commands</Link>
+          <Link to="/commands">Commands</Link>
         </li>
       </ul>
-      <Route exact path="/#/" component={App} />
-      <Route path="/#/commands" component={Commands} />
+      <Route exact path="/" component={App} />
+      <Route path="/commands" component={Commands} />
     </div>
   </Router>
 )
