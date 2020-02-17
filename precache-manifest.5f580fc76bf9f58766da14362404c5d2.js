@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bad4bac2c478205314729c55949c7f4e",
+    "revision": "f1dffe05df05c479747d09fe11fde242",
     "url": "/Everything-Twitch/index.html"
   },
   {
-    "revision": "03a07a77ee7944a005c2",
+    "revision": "62577059438fb7803521",
     "url": "/Everything-Twitch/static/css/main.d1b05096.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Everything-Twitch/static/js/2.723dce88.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "03a07a77ee7944a005c2",
-    "url": "/Everything-Twitch/static/js/main.60d8dd71.chunk.js"
+    "revision": "62577059438fb7803521",
+    "url": "/Everything-Twitch/static/js/main.b9281a81.chunk.js"
   },
   {
     "revision": "d4a09fec3af4b0a9583b",
