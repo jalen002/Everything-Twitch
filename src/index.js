@@ -4,11 +4,14 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { Route, Link, BrowserRouter as Router } from 'react-router-dom';
+import { createBrowserHistory } from 'history';
 
 import Commands from './view/commands/Commands';
 
+
+const history = createBrowserHistory();
 const routing = (
-  <Router basename={process.env.PUBLIC_URL}>
+  <Router basename={process.env.PUBLIC_URL} history={history}>
     <div>
       <ul>
         <li>
