@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "06b0bf085b1ed2c71a5efd42ba19570b",
+    "revision": "7e9104762ef2d62da925d67c851ed224",
     "url": "/Everything-Twitch/index.html"
   },
   {
-    "revision": "df5e4a1f48cc63d8af80",
+    "revision": "e5eec1709cee8cd92ae3",
     "url": "/Everything-Twitch/static/css/main.d1b05096.chunk.css"
   },
   {
@@ -16,15 +16,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Everything-Twitch/static/js/2.d35dd381.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "df5e4a1f48cc63d8af80",
-    "url": "/Everything-Twitch/static/js/main.a34e8d25.chunk.js"
+    "revision": "e5eec1709cee8cd92ae3",
+    "url": "/Everything-Twitch/static/js/main.f067a3b1.chunk.js"
   },
   {
     "revision": "d4a09fec3af4b0a9583b",
     "url": "/Everything-Twitch/static/js/runtime-main.147f7f85.js"
   },
   {
-    "revision": "293b3eea509a64ed6f87b4ed2aa55096",
-    "url": "/Everything-Twitch/static/media/scar.293b3eea.png"
+    "revision": "a883a60862b93401e5d9ba0faece1f64",
+    "url": "/Everything-Twitch/static/media/scar.a883a608.png"
   }
 ]);
