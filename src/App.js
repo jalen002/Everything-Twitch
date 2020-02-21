@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './scar.png';
+import logo from './resources/images/scar.png';
 import './App.css';
 
 function App() {
