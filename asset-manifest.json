@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Everything-Twitch/static/css/main.d1b05096.chunk.css",
-    "main.js": "/Everything-Twitch/static/js/main.e19448e1.chunk.js",
-    "main.js.map": "/Everything-Twitch/static/js/main.e19448e1.chunk.js.map",
+    "main.js": "/Everything-Twitch/static/js/main.ac5d5727.chunk.js",
+    "main.js.map": "/Everything-Twitch/static/js/main.ac5d5727.chunk.js.map",
     "runtime-main.js": "/Everything-Twitch/static/js/runtime-main.147f7f85.js",
     "runtime-main.js.map": "/Everything-Twitch/static/js/runtime-main.147f7f85.js.map",
     "static/js/2.695d0c27.chunk.js": "/Everything-Twitch/static/js/2.695d0c27.chunk.js",
     "static/js/2.695d0c27.chunk.js.map": "/Everything-Twitch/static/js/2.695d0c27.chunk.js.map",
     "index.html": "/Everything-Twitch/index.html",
-    "precache-manifest.f154cf46ec75158957b5a67e8225ee55.js": "/Everything-Twitch/precache-manifest.f154cf46ec75158957b5a67e8225ee55.js",
+    "precache-manifest.f68eda42511bb4d298f51badc9fac33c.js": "/Everything-Twitch/precache-manifest.f68eda42511bb4d298f51badc9fac33c.js",
     "service-worker.js": "/Everything-Twitch/service-worker.js",
     "static/css/main.d1b05096.chunk.css.map": "/Everything-Twitch/static/css/main.d1b05096.chunk.css.map",
     "static/js/2.695d0c27.chunk.js.LICENSE.txt": "/Everything-Twitch/static/js/2.695d0c27.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.147f7f85.js",
     "static/js/2.695d0c27.chunk.js",
     "static/css/main.d1b05096.chunk.css",
-    "static/js/main.e19448e1.chunk.js"
+    "static/js/main.ac5d5727.chunk.js"
   ]
 }
