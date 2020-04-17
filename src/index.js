@@ -14,19 +14,6 @@ import Drawer from '@material-ui/core/Drawer';
 import Commands from './view/commands/Commands';
 import StreamPage from './view/stream/Stream';
 
-// constructor(props) {
-//   super(props);
-//   this.state = {menu: false};
-// }
-
-// const toggleDrawer = (open) => event => {
-//   if (event && event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
-//     return;
-//   }
-
-//   setState({ ...state, menu: open });
-// };
-
 const routing = (
   <Router basename={process.env.PUBLIC_URL}>
     <AppBar position='static'>

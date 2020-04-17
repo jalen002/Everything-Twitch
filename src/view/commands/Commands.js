@@ -12,7 +12,6 @@ function createData(command, description) {
 
 const rows = [
   createData('!date', 'Tells the user what today\'s date is'),
-  createData('!florida', 'Gives a brief overview of Florida Gators football'),
   createData('!followed', 'Tells the user when they followed my channel'),
   createData('!followers', 'Gives the count of current channel followers'),
   createData('!following', 'Gives the user how long the you\'ve been following my channel'),
@@ -25,7 +24,6 @@ const rows = [
   createData('!song', 'Tells user what song is currently playing'),
   createData('!specs', 'Tells the user what my PC specs are'),
   createData('!stats', 'Gives stats about stream: Game, title, Uptime, viewers'),
-  createData('!texas', 'Gives a brief overview of Texas Longhorns football'),
   createData('!time', 'Gives the current time'),
   createData('!top5points', 'Top 5 users based on channel points'),
   createData('!top5time', 'Top 5 users based on hours watched'),
@@ -33,7 +31,8 @@ const rows = [
   createData('!yeet', 'A sound'),
   createData('!sr <youtube url>', 'Allows users to play a song on stream'),
   createData('!songrequest <youtube url>', 'Allows users to play a song on stream'),
-  createData('!commands', 'Gives user a link to a website with all the commands listed')
+  createData('!commands', 'Gives user a link to a website with all the commands listed'),
+  createData('!fk', 'A sound for when the opportunity presents itself')
 ];
 
 export default function Commands() {

@@ -1,5 +1,5 @@
 !date - Tells the user what today's date is
-!florida - Gives a brief overview of Florida Gators football
+!fk - A sound for when the opportunity presents itself
 !followed - Tells the user when they followed my channel
 !followers - Gives the count of current channel followers
 !following - Gives the user how long the y've been following my channel
@@ -12,7 +12,6 @@
 !song - Tells user what song is currently playing
 !specs - Tells the user what my PC specs are
 !stats - Gives stats about stream: Game, title, Uptime, viewers
-!texas - Gives a brief overview of Texas Longhorns football
 !time - Gives the current time
 !top5points - Top 5 users based on channel points
 !top5time - Top 5 users based on hours watched
