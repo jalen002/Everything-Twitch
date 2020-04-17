@@ -32,7 +32,11 @@ const rows = [
   createData('!sr <youtube url>', 'Allows users to play a song on stream'),
   createData('!songrequest <youtube url>', 'Allows users to play a song on stream'),
   createData('!commands', 'Gives user a link to a website with all the commands listed'),
-  createData('!fk', 'A sound for when the opportunity presents itself')
+  createData('!fk', 'A sound for when Mint Patty dies'),
+  createData('f', 'A sound for when Mint Patty dies'),
+  createData('!win', 'A sound for when Mint Patty wins'),
+  createData('b', 'A sound for when Mint Patty gets a kill'),
+  createData('!kill', 'A sound for when Mint Patty gets a kill')
 ];
 
 export default function Commands() {
