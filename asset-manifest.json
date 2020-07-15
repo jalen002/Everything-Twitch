@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Everything-Twitch/static/css/main.65e57f3a.chunk.css",
+    "main.css": "/Everything-Twitch/static/css/main.b86f9f68.chunk.css",
     "main.js": "/Everything-Twitch/static/js/main.8c300d26.chunk.js",
     "main.js.map": "/Everything-Twitch/static/js/main.8c300d26.chunk.js.map",
     "runtime-main.js": "/Everything-Twitch/static/js/runtime-main.147f7f85.js",
@@ -8,9 +8,9 @@
     "static/js/2.e65a7e83.chunk.js": "/Everything-Twitch/static/js/2.e65a7e83.chunk.js",
     "static/js/2.e65a7e83.chunk.js.map": "/Everything-Twitch/static/js/2.e65a7e83.chunk.js.map",
     "index.html": "/Everything-Twitch/index.html",
-    "precache-manifest.ca5efa1d678363d4bbe1f4695b6915f2.js": "/Everything-Twitch/precache-manifest.ca5efa1d678363d4bbe1f4695b6915f2.js",
+    "precache-manifest.1e4a11a0a35937188bb7ab7a32462f9d.js": "/Everything-Twitch/precache-manifest.1e4a11a0a35937188bb7ab7a32462f9d.js",
     "service-worker.js": "/Everything-Twitch/service-worker.js",
-    "static/css/main.65e57f3a.chunk.css.map": "/Everything-Twitch/static/css/main.65e57f3a.chunk.css.map",
+    "static/css/main.b86f9f68.chunk.css.map": "/Everything-Twitch/static/css/main.b86f9f68.chunk.css.map",
     "static/js/2.e65a7e83.chunk.js.LICENSE.txt": "/Everything-Twitch/static/js/2.e65a7e83.chunk.js.LICENSE.txt",
     "static/media/citi-field.jpg": "/Everything-Twitch/static/media/citi-field.b16487a2.jpg",
     "static/media/scar.png": "/Everything-Twitch/static/media/scar.a883a608.png"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.147f7f85.js",
     "static/js/2.e65a7e83.chunk.js",
-    "static/css/main.65e57f3a.chunk.css",
+    "static/css/main.b86f9f68.chunk.css",
     "static/js/main.8c300d26.chunk.js"
   ]
 }
