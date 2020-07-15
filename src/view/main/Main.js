@@ -72,15 +72,15 @@ export default function HomeAsDrawer() {
           <Divider className={classes.dividerColor}/>
           <List>
              <ListItem component={Link} to="/">
-             <ListItemIcon><MailIcon className='Drawer-icon'/></ListItemIcon>
+               <ListItemIcon><i class="fi-nnsuxx-home" style={{color: 'white'}}/></ListItemIcon>
                <ListItemText className='Drawer-text'>About Me</ListItemText>
              </ListItem>
              <ListItem component={Link} to="/commands">
-               <ListItemIcon><InboxIcon className='Drawer-icon' /></ListItemIcon>
+               <ListItemIcon><i class="fi-cnluxx-pen" style={{color: 'white'}}/></ListItemIcon>
                <ListItemText className='Drawer-text'>Commands</ListItemText>
              </ListItem>
              <ListItem component={Link} to="/stream">
-               <ListItemIcon><MailIcon className='Drawer-icon' /></ListItemIcon>
+               <ListItemIcon><i class="fi-nnsuxx-twitch-glitch" style={{color: 'white'}}/></ListItemIcon>
                <ListItemText className='Drawer-text'>Stream</ListItemText>
              </ListItem>
            </List>
