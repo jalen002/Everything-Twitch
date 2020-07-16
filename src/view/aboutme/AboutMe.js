@@ -10,7 +10,7 @@ export default function AboutMe() {
       <header className="App-header">
         <img src={scar} className="App-logo" alt="scar" />
         <p>
-          <h1>Mint Patty 17</h1>
+          <span>Mint Patty 17</span>
         </p>
       </header>
     </div>
