@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 import scar from '../../resources/images/scar.png'
 import './aboutme.css';
 
