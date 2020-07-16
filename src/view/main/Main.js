@@ -9,7 +9,7 @@ import { Route, Link, BrowserRouter as Router } from 'react-router-dom';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Drawer from '@material-ui/core/Drawer';
-import { withStyles } from '@material-ui/core/styles';
+import { withStyles, rgbToHex } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
@@ -46,17 +46,41 @@ const useStyles = theme => ({
   content: {
     flexGrow: 1,
     backgroundColor: theme.palette.background.default,
-  }
+  },
+  menuItemRoot: {
+    '&$menuItemSelected, &$menuItemSelected:focus, &$menuItemSelected:hover': {
+      backgroundColor: 'rgb(60,60,60)'
+    }
+  },
+  menuItemSelected: {}
 });
+
+const options = [
+  {
+    text: 'About Me',
+    icon: 'fi-nnsuxx-home',
+    linkTo: '/'
+  },
+  {
+    text: 'Commands',
+    icon: 'fi-cnluxx-pen',
+    linkTo: '/commands'
+  },
+  {
+    text: 'Stream',
+    icon: 'fi-nnsuxx-twitch-glitch',
+    linkTo: '/stream'
+  }
+];
 
 
 class Main extends Component {
   constructor(props) {
     super(props);
-    this.state = { selected: null };
+    this.state = { selected: 0 };
   }
 
-  updateSelected(selectedIndex) {
+  updateSelected(event, selectedIndex) {
     this.setState({ selected: selectedIndex });
   }
 
@@ -82,20 +106,23 @@ class Main extends Component {
           >
             <span className='Main-name'>Mint Patty 17</span>
             <Divider className={classes.dividerColor}/>
-            <List>
-              <MenuItem component={Link} to="/" onClick={() => this.updateSelected(0)} selected={selected === 0}>
-                <ListItemIcon><i className="fi-nnsuxx-home" style={{color: 'white'}}/></ListItemIcon>
-                <ListItemText className='Drawer-text'>About Me</ListItemText>
-              </MenuItem>
-              <MenuItem component={Link} to="/commands" onClick={() => this.updateSelected(1)} selected={selected === 1}>
-                <ListItemIcon><i className="fi-cnluxx-pen" style={{color: 'white'}}/></ListItemIcon>
-                <ListItemText className='Drawer-text'>Commands</ListItemText>
-              </MenuItem>
-              <MenuItem component={Link} to="/stream" onClick={() => this.updateSelected(2)} selected={selected === 2}>
-                <ListItemIcon><i className="fi-nnsuxx-twitch-glitch" style={{color: 'white'}}/></ListItemIcon>
-                <ListItemText className='Drawer-text'>Stream</ListItemText>
-              </MenuItem>
-            </List>
+            <List disablePadding={true}>
+              {options.map((option, index) => (
+                <MenuItem
+                component={Link} 
+                to={option.linkTo}
+                classes={{
+                  root: classes.menuItemRoot,
+                  selected: classes.menuItemSelected
+                }}
+                selected={index === this.state.selected}
+                onClick={event => this.updateSelected(event, index)}
+                >
+                  <ListItemIcon><i className={option.icon} style={{color: 'white'}}/></ListItemIcon>
+                  <ListItemText className='Drawer-text'>{option.text}</ListItemText>
+                </MenuItem>
+              ))}
+              </List>
           </Drawer>
           <main className={classes.content}>
             <div className={classes.toolbar} />
