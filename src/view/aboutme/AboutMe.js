@@ -6,8 +6,6 @@ import './aboutme.css';
 
 let trackerUrlBase = 'https://api.fortnitetracker.com/v1/';
 let platform = 'kbm';
-let epicNickname = 'MintPatty17.tv Ψ';
-let apiKey = '2b19e9ac-9f31-44c5-ac10-02c6127fc63d';
 
 class AboutMe extends Component{
   constructor (props){
@@ -20,17 +18,13 @@ class AboutMe extends Component{
   }
 
   componentDidMount (){
-    this.retrieveFortniteTrackingInfo('profile/'+platform+'/'+epicNickname);
+    //this.retrieveFortniteTrackingInfo('profile/'+platform+'/'+epicNickname);
   }
 
   retrieveFortniteTrackingInfo (endpoint){
     let trackerApi = trackerUrlBase + endpoint;
     let queryParams = {
       method: 'GET',
-      headers: {
-        'TRN-Api-Key': apiKey
-      },
-      crossdomain: true
     };
 
     this.setState({isLoaded: false, stats: null, error: null});
