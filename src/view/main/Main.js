@@ -4,8 +4,9 @@ import citiField from '../../resources/images/citi-field.jpg';
 import Commands from '../commands/Commands';
 import StreamPage from '../stream/Stream';
 import AboutMe from '../aboutme/AboutMe';
+import NotFound from '../notfound/NotFound';
 
-import { Route, Link, BrowserRouter as Router } from 'react-router-dom';
+import { Route, Link, BrowserRouter as Router, Switch } from 'react-router-dom';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Drawer from '@material-ui/core/Drawer';
@@ -125,9 +126,12 @@ class Main extends Component {
           </Drawer>
           <main className={classes.content}>
             <div className={classes.toolbar} />
-            <Route exact path='/' component={AboutMe} />
-            <Route path='/commands' component={Commands} />
-            <Route path='/stream' component={StreamPage} />
+            <Switch>
+              <Route exact path='/' component={AboutMe} />
+              <Route path='/commands' component={Commands} />
+              <Route path='/stream' component={StreamPage} />
+              <Route component={NotFound} />
+            </Switch>
           </main>
         </Router>
       </div>
