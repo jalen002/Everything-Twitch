@@ -4,9 +4,7 @@ import './aboutme.css';
 import fortnite from '../../resources/images/fortnite.jpg';
 import apiConfig from '../../resources/private/apiKeys';
 
-import {
-  LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
-} from 'recharts';
+import { Line } from 'react-chartjs-2';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
 import CardMedia from '@material-ui/core/CardMedia';
@@ -25,7 +23,7 @@ let epicNickname = apiConfig.epicNickname;
 
 const useStyles = theme => ({
   root: {
-    maxWidth: 390,
+    maxWidth: 690,
   },
   media: {
     height: 0,
@@ -50,7 +48,16 @@ class AboutMe extends Component{
     this.state = {
       error: null,
       isLoaded: false,
-      stats: null
+      stats: null,
+      recentMatchData: {
+        labels: [],
+        datasets: [{
+          label: 'Kills',
+          backgroundColor: 'rgba(0, 0, 180, 0.3)',
+          borderColor: 'rgba(0, 0, 180, 0.3)',
+          data: []
+        }]
+      },
     }
   }
 
@@ -74,26 +81,44 @@ class AboutMe extends Component{
       (result) => {
         this.setState({
           isLoaded: true,
-          stats: result.data
+          stats: result.data,
+          recentMatchData: {
+            datasets: [{
+              label: 'Kills',
+              backgroundColor: 'rgba(0, 0, 180, 0.3)',
+              borderColor: 'rgba(0, 0, 132, 0.3)',
+              data: result.data.recentMatches.map(match => {return {x: this.convertDate(match.dateCollected), y: match.kills}})
+            }]
+          }
         })
       },
       (error) => {
         this.setState({
           isLoaded: false,
-          error: error
+          error: error,
+          recentMatchData: {
+            datasets: [{
+              label: 'Kills',
+              backgroundColor: 'rgba(0, 0, 180, 0.3)',
+              borderColor: 'rgba(0, 0, 180, 0.3)',
+              data: []
+            }]
+          }
         });
       }
     )
   }
 
-  formatXAxis = (tickItem) => {
-    var date = new Date(tickItem).toLocaleDateString();
-    return date;
+  convertDate (date){
+    date = new Date(date);
+    var offset = new Date().getTimezoneOffset();
+    var convertedDate = date.setMinutes(date.getMinutes() - offset);
+    return convertedDate;
   }
 
   render (){
     let { classes } = this.props;
-    let {isLoaded, stats, error} = this.state;
+    let {isLoaded, stats, recentMatchData, error} = this.state;
 
     return (
       <div>
@@ -109,21 +134,36 @@ class AboutMe extends Component{
               title='Fortnite'
             />
             <CardMedia>
-              <LineChart width={360} height={150} data={isLoaded ? stats.recentMatches : null}
-              margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
-              >
-                <CartesianGrid strokeDasharray='3 3' />
-                <XAxis dataKey='dateCollected' tickFormatter={this.formatXAxis}/>
-                <YAxis/>
-                <Tooltip />
-                <Legend />
-                <Line type='monotone' dataKey='kills' stroke='#8884d8'/>
-              </LineChart>
+              <Line
+                data={recentMatchData}
+                options={{
+                  title:{
+                    display:true,
+                    text:'Recent Matches',
+                    fontSize:20
+                  },
+                  legend:{
+                    display:true,
+                    position:'right'
+                  },
+                  scales: {
+                    xAxes: [{
+                      type: 'time',
+                      time: {
+                        unit: 'hour'
+                      },
+                      ticks: {
+                        source: 'auto'
+                      }
+                    }]
+                  }
+                }}
+              />
             </CardMedia>
             <CardContent>
               <Typography variant='body2' color='textSecondary' component='p'>
-                Fortnite Wins: {isLoaded ? stats.lifeTimeStats[8].value : null}<br/>
-                Fortnite K/D: {isLoaded ? stats.lifeTimeStats[11].value : null}
+                Total Fortnite Wins: {isLoaded ? stats.lifeTimeStats[8].value : null}<br/>
+                Overall Fortnite K/D: {isLoaded ? stats.lifeTimeStats[11].value : null}
               </Typography>
             </CardContent>
           </Card>
