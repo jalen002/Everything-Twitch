@@ -29,16 +29,6 @@ const useStyles = theme => ({
     height: 0,
     paddingTop: '56.25%', // 16:9
   },
-  expand: {
-    transform: 'rotate(0deg)',
-    marginLeft: 'auto',
-    transition: theme.transitions.create('transform', {
-      duration: theme.transitions.duration.shortest,
-    }),
-  },
-  expandOpen: {
-    transform: 'rotate(180deg)',
-  },
 });
 
 
@@ -53,8 +43,8 @@ class AboutMe extends Component{
         labels: [],
         datasets: [{
           label: 'Kills',
-          backgroundColor: 'rgba(0, 0, 180, 0.3)',
-          borderColor: 'rgba(0, 0, 180, 0.3)',
+          backgroundColor: 'rgba(115, 210, 255, 0.4)',
+          borderColor: 'rgba(0, 0, 255, 0.4)',
           data: []
         }]
       },
@@ -79,32 +69,10 @@ class AboutMe extends Component{
     axios.get(trackerApi, queryParams)
     .then(
       (result) => {
-        this.setState({
-          isLoaded: true,
-          stats: result.data,
-          recentMatchData: {
-            datasets: [{
-              label: 'Kills',
-              backgroundColor: 'rgba(0, 0, 180, 0.3)',
-              borderColor: 'rgba(0, 0, 132, 0.3)',
-              data: result.data.recentMatches.map(match => {return {x: this.convertDate(match.dateCollected), y: match.kills}})
-            }]
-          }
-        })
+        this.complexStateUpdate(result.data);
       },
       (error) => {
-        this.setState({
-          isLoaded: false,
-          error: error,
-          recentMatchData: {
-            datasets: [{
-              label: 'Kills',
-              backgroundColor: 'rgba(0, 0, 180, 0.3)',
-              borderColor: 'rgba(0, 0, 180, 0.3)',
-              data: []
-            }]
-          }
-        });
+        this.complexStateUpdate();
       }
     )
   }
@@ -114,6 +82,17 @@ class AboutMe extends Component{
     var offset = new Date().getTimezoneOffset();
     var convertedDate = date.setMinutes(date.getMinutes() - offset);
     return convertedDate;
+  }
+
+  complexStateUpdate (apiResult){
+    var isLoaded = this.state.isLoaded;
+    var stats = this.state.stats;
+    var recentMatchData = this.state.recentMatchData;
+
+    isLoaded = apiResult ? true : false;
+    stats = apiResult;
+    recentMatchData.datasets[0].data = apiResult ? apiResult.recentMatches.map(match => {return {x: this.convertDate(match.dateCollected), y: match.kills}}) : [];
+    this.setState({isLoaded, stats, recentMatchData});
   }
 
   render (){
@@ -150,7 +129,10 @@ class AboutMe extends Component{
                     xAxes: [{
                       type: 'time',
                       time: {
-                        unit: 'hour'
+                        unit: 'hour',
+                        displayFormats: {
+                          hour: 'MMM D h:mm a'
+                        }
                       },
                       ticks: {
                         source: 'auto'
