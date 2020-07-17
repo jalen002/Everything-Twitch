@@ -1,24 +1,25 @@
 {
   "files": {
-    "main.css": "/Everything-Twitch/static/css/main.966790cc.chunk.css",
-    "main.js": "/Everything-Twitch/static/js/main.b8edd2d8.chunk.js",
-    "main.js.map": "/Everything-Twitch/static/js/main.b8edd2d8.chunk.js.map",
+    "main.css": "/Everything-Twitch/static/css/main.8d131ec0.chunk.css",
+    "main.js": "/Everything-Twitch/static/js/main.e7509002.chunk.js",
+    "main.js.map": "/Everything-Twitch/static/js/main.e7509002.chunk.js.map",
     "runtime-main.js": "/Everything-Twitch/static/js/runtime-main.147f7f85.js",
     "runtime-main.js.map": "/Everything-Twitch/static/js/runtime-main.147f7f85.js.map",
-    "static/js/2.ce0509cc.chunk.js": "/Everything-Twitch/static/js/2.ce0509cc.chunk.js",
-    "static/js/2.ce0509cc.chunk.js.map": "/Everything-Twitch/static/js/2.ce0509cc.chunk.js.map",
+    "static/js/2.cf24eda0.chunk.js": "/Everything-Twitch/static/js/2.cf24eda0.chunk.js",
+    "static/js/2.cf24eda0.chunk.js.map": "/Everything-Twitch/static/js/2.cf24eda0.chunk.js.map",
     "index.html": "/Everything-Twitch/index.html",
-    "precache-manifest.51ae28886003af57a9f71802a5b32485.js": "/Everything-Twitch/precache-manifest.51ae28886003af57a9f71802a5b32485.js",
+    "precache-manifest.124b272dd4ca71edd94053dfac6cc729.js": "/Everything-Twitch/precache-manifest.124b272dd4ca71edd94053dfac6cc729.js",
     "service-worker.js": "/Everything-Twitch/service-worker.js",
-    "static/css/main.966790cc.chunk.css.map": "/Everything-Twitch/static/css/main.966790cc.chunk.css.map",
-    "static/js/2.ce0509cc.chunk.js.LICENSE.txt": "/Everything-Twitch/static/js/2.ce0509cc.chunk.js.LICENSE.txt",
+    "static/css/main.8d131ec0.chunk.css.map": "/Everything-Twitch/static/css/main.8d131ec0.chunk.css.map",
+    "static/js/2.cf24eda0.chunk.js.LICENSE.txt": "/Everything-Twitch/static/js/2.cf24eda0.chunk.js.LICENSE.txt",
+    "static/media/404-sad-face.png": "/Everything-Twitch/static/media/404-sad-face.64f4e1b7.png",
     "static/media/citi-field.jpg": "/Everything-Twitch/static/media/citi-field.b16487a2.jpg",
     "static/media/fortnite.jpg": "/Everything-Twitch/static/media/fortnite.d8436339.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.147f7f85.js",
-    "static/js/2.ce0509cc.chunk.js",
-    "static/css/main.966790cc.chunk.css",
-    "static/js/main.b8edd2d8.chunk.js"
+    "static/js/2.cf24eda0.chunk.js",
+    "static/css/main.8d131ec0.chunk.css",
+    "static/js/main.e7509002.chunk.js"
   ]
 }
