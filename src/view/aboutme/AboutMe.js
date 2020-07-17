@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import './aboutme.css';
 import fortnite from '../../resources/images/fortnite.jpg';
+import apiConfig from '../../resources/private/apiKeys';
+
 import {
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
 } from 'recharts';
@@ -18,8 +20,8 @@ import { withStyles } from '@material-ui/core/styles';
 let proxyUrl = 'https://cors-anywhere.herokuapp.com/';
 let trackerUrlBase = 'https://api.fortnitetracker.com/v1/';
 let platform = 'kbm';
-let apiKey = '2b19e9ac-9f31-44c5-ac10-02c6127fc63d';
-let epicNickname = 'MintPatty17.tv Ψ';
+let apiKey = apiConfig.apiKey;
+let epicNickname = apiConfig.epicNickname;
 
 const useStyles = theme => ({
   root: {
