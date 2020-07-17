@@ -9,7 +9,7 @@ import { Route, Link, BrowserRouter as Router } from 'react-router-dom';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Drawer from '@material-ui/core/Drawer';
-import { withStyles, rgbToHex } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
@@ -86,7 +86,6 @@ class Main extends Component {
 
   render () {
     const { classes } = this.props;
-    const { selected } = this.state;
 
 
     return (
