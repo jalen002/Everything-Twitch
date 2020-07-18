@@ -1,16 +1,27 @@
-import React from 'react';
-import ReactPlayer from 'react-player';
+import React, { Component } from 'react';
+// import ReactPlayer from 'react-player';
+import { TwitchEmbed } from 'react-twitch-embed';
 
-export default function Stream() {
 
+class Stream extends Component {
+  constructor (props){
+    super(props);
+  }
 
-  return (
-    <div style={{width: '100%', marginTop: '25px'}}>
-        <ReactPlayer
-        url='https://www.twitch.tv/mintpatty17'
-        style={{margin: 'auto'}}
-        controls
+  render (){
+    return (
+      // Add a placeholder for the Twitch embed
+      <div>
+        <TwitchEmbed
+          channel="mintpatty17"
+          id="mintpatty17"
+          theme="dark"
+          muted
+          onVideoPause={() => console.log(':(')}
         />
-  </div>
-  );
+      </div>
+    )
+  }
 }
+
+export default Stream;
