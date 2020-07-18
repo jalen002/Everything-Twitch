@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/Everything-Twitch/static/css/main.8d131ec0.chunk.css",
-    "main.js": "/Everything-Twitch/static/js/main.cf7b705e.chunk.js",
-    "main.js.map": "/Everything-Twitch/static/js/main.cf7b705e.chunk.js.map",
+    "main.js": "/Everything-Twitch/static/js/main.63003817.chunk.js",
+    "main.js.map": "/Everything-Twitch/static/js/main.63003817.chunk.js.map",
     "runtime-main.js": "/Everything-Twitch/static/js/runtime-main.147f7f85.js",
     "runtime-main.js.map": "/Everything-Twitch/static/js/runtime-main.147f7f85.js.map",
-    "static/js/2.1f3376c2.chunk.js": "/Everything-Twitch/static/js/2.1f3376c2.chunk.js",
-    "static/js/2.1f3376c2.chunk.js.map": "/Everything-Twitch/static/js/2.1f3376c2.chunk.js.map",
+    "static/js/2.557efc35.chunk.js": "/Everything-Twitch/static/js/2.557efc35.chunk.js",
+    "static/js/2.557efc35.chunk.js.map": "/Everything-Twitch/static/js/2.557efc35.chunk.js.map",
     "index.html": "/Everything-Twitch/index.html",
-    "precache-manifest.57444c9e21db5c5635202e6f00b3b92b.js": "/Everything-Twitch/precache-manifest.57444c9e21db5c5635202e6f00b3b92b.js",
+    "precache-manifest.ea5628173ca549f9277a76ff4b76b934.js": "/Everything-Twitch/precache-manifest.ea5628173ca549f9277a76ff4b76b934.js",
     "service-worker.js": "/Everything-Twitch/service-worker.js",
     "static/css/main.8d131ec0.chunk.css.map": "/Everything-Twitch/static/css/main.8d131ec0.chunk.css.map",
-    "static/js/2.1f3376c2.chunk.js.LICENSE.txt": "/Everything-Twitch/static/js/2.1f3376c2.chunk.js.LICENSE.txt",
+    "static/js/2.557efc35.chunk.js.LICENSE.txt": "/Everything-Twitch/static/js/2.557efc35.chunk.js.LICENSE.txt",
     "static/media/404-sad-face.png": "/Everything-Twitch/static/media/404-sad-face.64f4e1b7.png",
     "static/media/citi-field.jpg": "/Everything-Twitch/static/media/citi-field.b16487a2.jpg",
     "static/media/fortnite.jpg": "/Everything-Twitch/static/media/fortnite.d8436339.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.147f7f85.js",
-    "static/js/2.1f3376c2.chunk.js",
+    "static/js/2.557efc35.chunk.js",
     "static/css/main.8d131ec0.chunk.css",
-    "static/js/main.cf7b705e.chunk.js"
+    "static/js/main.63003817.chunk.js"
   ]
 }
