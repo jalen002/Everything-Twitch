@@ -3,9 +3,6 @@ import { TwitchEmbed } from 'react-twitch-embed';
 
 
 class Stream extends Component {
-  constructor (props){
-    super(props);
-  }
 
   render (){
     return (
