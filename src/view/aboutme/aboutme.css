@@ -9,5 +9,6 @@
 }
 
 .aboutMeBody {
-    padding: 30px
+    display: flex;
+    padding: 30px;
 }
