@@ -12,6 +12,7 @@ class ApexSeasonWins extends Component {
                   label: 'Wins',
                   backgroundColor: 'rgba(179, 12, 0, 0.4)',
                   borderColor: 'rgba(255, 0, 0, 0.4)',
+                  lineTension: 0,
                   data: []
               }]
           }
@@ -61,6 +62,10 @@ class ApexSeasonWins extends Component {
                 suggestedMin: 0
               }
             }]
+          },
+          animation: {
+            duration: 3000,
+            easing: 'linear'
           }
         }}
       />

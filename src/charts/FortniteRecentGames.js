@@ -12,6 +12,7 @@ class FortniteRecentGames extends Component {
                   label: 'Kills',
                   backgroundColor: 'rgba(115, 210, 255, 0.4)',
                   borderColor: 'rgba(0, 0, 255, 0.4)',
+                  lineTension: 0,
                   data: []
               }]
           }
