@@ -28,7 +28,8 @@ let originName = apiConfig.originName;
 
 const useStyles = theme => ({
   root: {
-    maxWidth: 690,
+    width: 590,
+    margin: '30px',
   },
   media: {
     height: 0,
