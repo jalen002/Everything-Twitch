@@ -19,7 +19,7 @@ import ApexSeasonWins from '../../charts/ApexSeasonWins';
 
 let proxyUrl = 'https://cors-anywhere.herokuapp.com/';
 let fortniteTrackerUrlBase = 'https://api.fortnitetracker.com/v1/';
-let apexTrackerUrlBase = 'https://public-api.tracker.gg/apex/v1/';
+let apexTrackerUrlBase = 'https://public-api.tracker.gg/v2/apex/';
 let fortnitePlatform = 'kbm';
 let apexPlatform = 5; //pc/origin
 let apiKey = apiConfig.apiKey;

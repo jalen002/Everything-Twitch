@@ -24,9 +24,12 @@ export default class ApexSeasonWins extends Component {
     let winLabels = [];
 
     if(data){
-      data.stats.filter(stat => { return stat.metadata.key.includes('Wins') }).forEach(stat => {
-        return winData.push({ x: stat.metadata.name, y: stat.value});
-      });
+      let stats = data.segments[0].stats;
+      for(let key in stats){
+        if(stats[key].displayName.includes('Wins')){
+          winData.push({ x: stats[key].displayName, y: stats[key].value });
+        }
+      }
       
       winData.forEach(stat => {
         return winLabels.push(stat.x);
