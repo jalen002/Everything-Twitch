@@ -1,33 +1,84 @@
 import React, { Component } from 'react';
-import { Line } from 'react-chartjs-2';
+import Chart from 'chart.js';
 
 
-class FortniteRecentGames extends Component {
+let fortniteRecentGamesChart;
+
+export default class FortniteRecentGames extends Component {
   constructor(props) {
       super(props);
-      this.state = {
-          recentMatchData: {
-              labels: [],
-              datasets: [{
-                  label: 'Kills',
-                  backgroundColor: 'rgba(115, 210, 255, 0.4)',
-                  borderColor: 'rgba(0, 0, 255, 0.4)',
-                  lineTension: 0,
-                  data: []
-              }]
-          }
-      };
+      this.chartRef = React.createRef();
   }
 
-  componentWillReceiveProps ({data}){
-    this.updateChartData(data);
+  componentDidMount() {
+    this.buildChart();
+  }
+  componentDidUpdate() {
+    this.buildChart();
   }
 
-  updateChartData(data) {
-    var recentMatchData = this.state.recentMatchData;
+  buildChart() {
+    const myChartRef = this.chartRef.current.getContext("2d");
+    const { data } = this.props;
 
-    recentMatchData.datasets[0].data = data ? data.recentMatches.map(match => { return { x: this.convertDate(match.dateCollected), y: match.kills } }) : [];
-    this.setState({ recentMatchData });
+    if (typeof fortniteRecentGamesChart !== "undefined"){
+      fortniteRecentGamesChart.destroy();
+    }
+    
+    let chartData = this.getChartData(data); // only need data because our data will include labels
+    fortniteRecentGamesChart = new Chart(myChartRef, {
+      type: 'line',
+      data: {
+        labels: [],
+        datasets: [{
+            label: 'Kills',
+            backgroundColor: 'rgba(115, 210, 255, 0.4)',
+            borderColor: 'rgba(0, 0, 255, 0.4)',
+            lineTension: 0,
+            data: chartData
+        }]
+      },
+      options: {
+        title: {
+          display: true,
+          text: 'Recent Matches',
+          fontSize: 20
+        },
+        legend: {
+          display: true,
+          position: 'right'
+        },
+        scales: {
+          xAxes: [{
+            type: 'time',
+            time: {
+              unit: 'hour',
+              displayFormats: {
+                hour: 'MMM D h:mm a'
+              }
+            },
+            ticks: {
+              source: 'auto'
+            }
+          }]
+        },
+        animation: {
+          duration: 2000,
+          easing: 'easeOutBounce'
+        }
+      }
+    });
+  }
+
+  getChartData(data) {
+    let recentGamesData = [];
+    if(data){
+      data.recentMatches.forEach(match => {
+        return recentGamesData.push({ x: this.convertDate(match.dateCollected), y: match.kills});
+      });
+    }
+
+    return recentGamesData;
   }
 
   convertDate(date) {
@@ -39,39 +90,13 @@ class FortniteRecentGames extends Component {
 
 
   render() {
-    let { recentMatchData } = this.state;
-
     return (
-      <Line
-        data={recentMatchData}
-        options={{
-          title: {
-            display: true,
-            text: 'Recent Matches',
-            fontSize: 20
-          },
-          legend: {
-            display: true,
-            position: 'right'
-          },
-          scales: {
-            xAxes: [{
-              type: 'time',
-              time: {
-                unit: 'hour',
-                displayFormats: {
-                  hour: 'MMM D h:mm a'
-                }
-              },
-              ticks: {
-                source: 'auto'
-              }
-            }]
-          }
-        }}
-      />
+      <div>
+        <canvas
+          id='fortniteRecentGamesChart'
+          ref={this.chartRef}
+        />
+      </div>
     );
   }
 }
-
-export default FortniteRecentGames;

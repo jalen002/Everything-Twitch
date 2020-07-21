@@ -1,76 +1,99 @@
 import React, { Component } from 'react';
-import { Line } from 'react-chartjs-2';
+import Chart from 'chart.js';
 
 
-class ApexSeasonWins extends Component {
+
+let apexWinsChart;
+
+export default class ApexSeasonWins extends Component {
   constructor(props) {
       super(props);
-      this.state = {
-          seasonWins: {
-              labels: [],
-              datasets: [{
-                  label: 'Wins',
-                  backgroundColor: 'rgba(179, 12, 0, 0.4)',
-                  borderColor: 'rgba(255, 0, 0, 0.4)',
-                  lineTension: 0,
-                  data: []
-              }]
-          }
-      };
+      this.chartRef = React.createRef();
   }
 
-  componentWillReceiveProps ({data}){
-    this.updateChartData(data);
+  componentDidMount() {
+    this.buildChart();
   }
 
-  updateChartData(data) {
-    var seasonWins = this.state.seasonWins;
+  componentDidUpdate() {
+    this.buildChart();
+  }
+
+  getChartDataAndLabels(data) {
+    let winData = [];
+    let winLabels = [];
 
     if(data){
-      seasonWins.datasets[0].data = data.stats.filter(stat => { return stat.metadata.key.includes('Wins') }).map(stat => {
-        return { x: stat.metadata.name, y: stat.value}
+      data.stats.filter(stat => { return stat.metadata.key.includes('Wins') }).forEach(stat => {
+        return winData.push({ x: stat.metadata.name, y: stat.value});
       });
       
-      seasonWins.labels = seasonWins.datasets[0].data.map(stat => {
-        return stat.x;
+      winData.forEach(stat => {
+        return winLabels.push(stat.x);
       });
-      
-      this.setState({ seasonWins });
     }
+
+    return {
+      data: winData,
+      labels: winLabels
+    };
+  }
+
+  buildChart() {
+    const myChartRef = this.chartRef.current.getContext("2d");
+    const { data } = this.props;
+
+    if (typeof apexWinsChart !== "undefined"){
+      apexWinsChart.destroy();
+    }
+    
+    let dataAndLabels = this.getChartDataAndLabels(data);
+    apexWinsChart = new Chart(myChartRef, {
+      type: 'line',
+      data: {
+        labels: dataAndLabels.labels,
+        datasets: [{
+          label: 'Wins',
+          backgroundColor: 'rgba(179, 12, 0, 0.4)',
+          borderColor: 'rgba(255, 0, 0, 0.4)',
+          lineTension: 0,
+          data: dataAndLabels.data
+        }]
+      },
+      options: {
+        title: {
+          display: true,
+          text: 'Wins by Season',
+          fontSize: 20
+        },
+        legend: {
+          display: true,
+          position: 'right'
+        },
+        scales: {
+          yAxes: [{
+            ticks: {
+              suggestedMin: 0
+            }
+          }]
+        },
+        animation: {
+          duration: 2000,
+          easing: 'easeOutBounce'
+        }
+      }
+    });
   }
 
 
   render() {
-    let { seasonWins } = this.state;
-
     return (
-      <Line
-        data={seasonWins}
-        options={{
-          title: {
-            display: true,
-            text: 'Wins by Season',
-            fontSize: 20
-          },
-          legend: {
-            display: true,
-            position: 'right'
-          },
-          scales: {
-            yAxes: [{
-              ticks: {
-                suggestedMin: 0
-              }
-            }]
-          },
-          animation: {
-            duration: 3000,
-            easing: 'linear'
-          }
-        }}
-      />
+      <div>
+        <canvas
+          id='apexWinsChart'
+          ref={this.chartRef}
+        />
+      </div>
     );
   }
 }
-
-export default ApexSeasonWins;
