@@ -28,15 +28,15 @@ const rows = [
   createData('!top5points', 'Top 5 users based on channel points'),
   createData('!top5time', 'Top 5 users based on hours watched'),
   createData('!uptime', 'How long the current stream has been live'),
-  createData('!yeet', 'A sound'),
+  // createData('!yeet', 'A sound'),
   createData('!sr <youtube url>', 'Allows users to play a song on stream'),
   createData('!songrequest <youtube url>', 'Allows users to play a song on stream'),
   createData('!commands', 'Gives user a link to a website with all the commands listed'),
-  createData('!fk', 'A sound for when Mint Patty dies'),
-  createData('f', 'A sound for when Mint Patty dies'),
-  createData('!win', 'A sound for when Mint Patty wins'),
-  createData('b', 'A sound for when Mint Patty gets a kill'),
-  createData('!kill', 'A sound for when Mint Patty gets a kill')
+  // createData('!fk', 'A sound for when Mint Patty dies'),
+  // createData('f', 'A sound for when Mint Patty dies'),
+  // createData('!win', 'A sound for when Mint Patty wins'),
+  // createData('b', 'A sound for when Mint Patty gets a kill'),
+  // createData('!kill', 'A sound for when Mint Patty gets a kill')
 ];
 
 export default function Commands() {
