@@ -67,11 +67,11 @@ const options = [
     icon: 'fi-cnluxx-pen',
     linkTo: '/commands'
   },
-  // {
-  //   text: 'Stream',
-  //   icon: 'fi-nnsuxx-twitch-glitch',
-  //   linkTo: '/stream'
-  // }
+  {
+    text: 'Stream',
+    icon: 'fi-nnsuxx-twitch-glitch',
+    linkTo: '/stream'
+  }
 ];
 
 
